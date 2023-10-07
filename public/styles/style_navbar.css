@@ -1,0 +1,10 @@
+body {
+    padding-top: 56px;
+}
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 1000;
+}

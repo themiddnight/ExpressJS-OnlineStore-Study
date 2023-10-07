@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('partials/head.ejs') %>
+	<link rel="stylesheet" href="/styles/style_product.css">
+	<title>MIDDNIGHT - <%= product.name %></title>
+</head>
+
+<body data-bs-theme="dark">
+	<!-- navbar -->
+	<%- include('partials/navbar') %>
+
+	<!-- container -->
+	<div class="container mt-4">
+
+		<h1 class="py-4"><%= product.name %></h1>
+		<div class="row">
+
+			<!-- photo and progress-->
+			<div class="col-md-6 mb-5">
+				<!-- photo -->
+				<img class="img-thumbnail mb-4 mx-auto d-block shadow"
+					src="/images/products/<%= product.image %>"
+					alt="">
+				<!-- progress -->
+				<div class=" mb-4 mx-auto mw-10 d-block" style="max-width: 500px;">
+					<p class="">Stock (4/10)</p>
+					<div class="progress" role="progressbar" style="height: 15px">
+						<div class="progress-bar bg-warning" style="width: 40%"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- detail -->
+			<div class="col-md-6 mb-5">
+				<!-- feature card -->
+				<div class="card mb-4 p-3 bg-body-secondary border-0 shadow">
+					<div class="card-body">
+						<h4 class="card-title"><%= product.headline %></h4>
+						<p class="card-text"><%= product.description %></p>
+						<!-- price -->
+						<h4 class="card-text fw-bold my-4">$<%= product.price %></h4>
+						<!-- form -->
+						<label class="form-label">Quantity:</label>
+						<div class="row row-cols-sm-auto g-3">
+							<div>
+								<input type="number" id="quantity" value="1" class="form-control bg-dark-subtle">
+							</div>
+							<div>
+								<button type="submit" class="btn btn-warning">Add to Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- spec -->
+				<div class="card shadow">
+					<div class="card-header fw-bold">
+						Specifications
+					</div>
+					<div class="card-body">
+						<div class="table-responsive">
+							<table class="table fs-6">
+								<% for (let spec of product.specs) { %>
+								<tr>
+									<td><small class="fw-bold"><%= spec.name %></small></td>
+									<td><small class="fw-light"><%= spec.value %></small></td>
+								</tr>
+								<% } %>
+							</table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- submit review -->
+		<div class="card mb-4 bg-dark-subtle shadow">
+			<div class="card-header bg-dark-subtle fw-bold">Your review</div>
+			<div class="card-body">
+				<!-- form -->
+				<form action="/add-review" method="post">
+    			<input type="hidden" name="id" id="idInput" value="<%= product.id %>">
+					<div class="mb-3">
+						<label for="nameInput" class="mb-2">Your name</label>
+						<input type="text" name="author" id="nameInput" class="form-control border-0" placeholder="Name">
+					</div>
+
+					<div>
+						<div>
+							<label class="mb-2">Rating</label>
+							<div class="mb-3">
+								<div class="form-check form-check-inline me-4">
+									<input class="form-check-input" type="radio" name="rating" id="ratingCheckbox1" value="1">
+									<label class="form-check-label" for="ratingCheckbox1">1</label>
+								</div>
+								<div class="form-check form-check-inline me-4">
+									<input class="form-check-input" type="radio" name="rating" id="ratingCheckbox2" value="2">
+									<label class="form-check-label" for="ratingCheckbox2">2</label>
+								</div>
+								<div class="form-check form-check-inline me-4">
+									<input class="form-check-input" type="radio" name="rating" id="ratingCheckbox3" value="3">
+									<label class="form-check-label" for="ratingCheckbox3">3</label>
+								</div>
+								<div class="form-check form-check-inline me-4">
+									<input class="form-check-input" type="radio" name="rating" id="ratingCheckbox4" value="4">
+									<label class="form-check-label" for="ratingCheckbox4">4</label>
+								</div>
+								<div class="form-check form-check-inline me-4">
+									<input class="form-check-input" type="radio" name="rating" id="ratingCheckbox5" value="5">
+									<label class="form-check-label" for="ratingCheckbox5">5</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label for="reviewInput" class="mb-2">Review</label>
+						<textarea id="reviewInput" name="review" class="form-control border-0" rows="5" placeholder="Your review"></textarea>
+					</div>
+
+					<input type="submit" class="btn btn-warning float-end" id="submitReviewBtn" value="Submit Review">
+				</form>
+			</div>
+		</div>
+
+		<!-- reviews -->
+		<div class="list-group mb-5 shadow" id="reviews-div">
+			<div class="list-group-item bg-body-tertiary fw-bold">Reviews</div>
+
+			<% for (let review of product.reviews) { %>
+			<div class="list-group-item py-3">
+				<div class="d-flex gap-3">
+					<h5 class="fw-bold"><%= review.author %></h5>
+					<div class="fw-lighter text-warning"><%= review.stars %> stars</div>
+				</div>
+				<div class=""><%= review.body %></div>
+			</div>
+			<% } %>
+		
+		</div>
+
+	</div>
+	
+	<!-- footer -->
+	<%- include('partials/footer') %>
+
+	<!-- script -->
+	<script>
+		// check ontype event for nameInput, ratingCheckbox, reviewInput. if all are not empty, enable submitReviewBtn
+		const nameInput = document.getElementById('nameInput');
+		const ratingCheckbox = document.querySelectorAll('input[name="rating"]');
+		const reviewInput = document.getElementById('reviewInput');
+		const submitReviewBtn = document.getElementById('submitReviewBtn');
+
+		nameInput.addEventListener('input', checkInput);
+		reviewInput.addEventListener('input', checkInput);
+		ratingCheckbox.forEach(rating => {
+			rating.addEventListener('input', checkInput);
+		});
+
+		function checkInput() {
+			if (nameInput.value && reviewInput.value && document.querySelector('input[name="rating"]:checked')) {
+				submitReviewBtn.disabled = false;
+			} else {
+				submitReviewBtn.disabled = true;
+			}
+		}
+	</script>
+</body>
+
+</html>

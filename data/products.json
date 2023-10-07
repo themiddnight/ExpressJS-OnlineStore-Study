@@ -1,0 +1,614 @@
+[
+    {
+        "id": "1",
+        "name": "Canon AE-1 Program",
+        "price": 90.00,
+        "featured": false,
+        "headline": "A Classic 35mm Film SLR Camera",
+        "description": "The Canon AE-1 Program is a legendary 35 mm single-lens reflex camera that uses Canon's FD mount lenses. Introduced in 1981, it became an instant classic, five years after the original AE-1. One of its standout features is the Program AE mode, which automatically sets the shutter speed and aperture, making it user-friendly for beginners while still offering manual control options.",
+        "image": "Canon AE-1 Program.jpg",
+        "specs": [
+            {
+                "name": "Type",
+                "value": "35mm SLR"
+            },
+            {
+                "name": "Lens mount",
+                "value": "Canon FD"
+            },
+            {
+                "name": "Focus",
+                "value": "Manual"
+            },
+            {
+                "name": "Exposure",
+                "value": "Program AE, Shutter priority AE, Aperture priority AE, Manual"
+            },
+            {
+                "name": "Flash",
+                "value": "Hot shoe"
+            },
+            {
+                "name": "Dimensions",
+                "value": "141 x 92 x 48 mm"
+            },
+            {
+                "name": "Weight",
+                "value": "590 g"
+            }
+        ],
+        "reviews": [
+            {
+                "stars": 5,
+                "body": "I've been using the Canon AE-1 Program for years, and it never disappoints. The photos it produces are stunning, and its versatility is unmatched. A true classic!",
+                "author": "PhotographyPro123"
+            },
+            {
+                "stars": 4,
+                "body": "The Canon AE-1 Program is a reliable workhorse. I've captured countless memorable moments with this camera. The only reason I'm not giving it 5 stars is because it's a bit heavy to carry around all day.",
+                "author": "OutdoorEnthusiast"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Canon AF35M Autoboy",
+        "price": 120.00,
+        "featured": false,
+        "headline": "The Pioneering Automatic Compact Camera",
+        "description": "The Canon AF35M, known as the 'Autoboy' in Japan and 'Sure Shot' in the US, was the world's first fully automatic compact camera. Launched in 1979 and discontinued in 1983, it revolutionized photography with its infrared autofocus sensor. This camera made capturing moments effortlessly simple.",
+        "image": "Canon AF35M Autoboy.jpg",
+        "specs": [
+            {
+                "name": "Type",
+                "value": "35mm compact"
+            },
+            {
+                "name": "Lens",
+                "value": "38mm f/2.8"
+            },
+            {
+                "name": "Focus",
+                "value": "Infrared autofocus"
+            },
+            {
+                "name": "Exposure",
+                "value": "Automatic"
+            },
+            {
+                "name": "Flash",
+                "value": "Built-in"
+            },
+            {
+                "name": "Dimensions",
+                "value": "131 x 76 x 48 mm"
+            },
+            {
+                "name": "Weight",
+                "value": "405 g"
+            }
+        ],
+        "reviews": [
+            {
+                "stars": 5,
+                "body": "I can't believe this camera was ahead of its time! The autofocus feature is incredible, and the photos turn out sharp and clear. A must-have for any photography enthusiast!",
+                "author": "ShutterbugMaster"
+            },
+            {
+                "stars": 4,
+                "body": "The Canon AF35M Autoboy is a gem from the past. It's so easy to use, and the autofocus works like magic. The only downside is finding film for it these days.",
+                "author": "VintageCameraLover"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Canon FTb-QL",
+        "price": 178.28,
+        "featured": false,
+        "headline": "Classic Canon Film SLR",
+        "description": "The Canon FTb-QL is a classic 35mm film SLR camera known for its reliability and versatility. With a robust build and a range of compatible lenses, it's a favorite among vintage camera enthusiasts.",
+        "image": "Canon FTb-QL.jpg",
+        "specs": [
+            {
+                "name": "Type",
+                "value": "35mm SLR"
+            },
+            {
+                "name": "Lens mount",
+                "value": "Canon FD"
+            },
+            {
+                "name": "Focus",
+                "value": "Manual"
+            },
+            {
+                "name": "Exposure",
+                "value": "Manual"
+            },
+            {
+                "name": "Flash",
+                "value": "Hot shoe"
+            },
+            {
+                "name": "Dimensions",
+                "value": "141 x 92 x 48 mm"
+            },
+            {
+                "name": "Weight",
+                "value": "590 g"
+            }
+        ],
+        "reviews": [
+            {
+                "stars": 4,
+                "body": "The Canon FTb-QL is a solid camera that never lets me down. It's built like a tank and handles well. A great choice for film enthusiasts.",
+                "author": "FilmFanatic"
+            },
+            {
+                "stars": 3,
+                "body": "I appreciate the Canon FTb-QL's durability, but it feels a bit dated compared to modern cameras. Still, it's a reliable option for traditional photography.",
+                "author": "OldSchoolShooter"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Fuji GL690 Pro",
+        "price": 360.49,
+        "featured": false,
+        "headline": "Medium Format Excellence",
+        "description": "The Fuji GL690 Pro is a medium format camera designed for professional photographers. With its large film format, it delivers exceptional image quality and is a top choice for portrait and landscape photographers.",
+        "image": "Fuji GL690 Pro.jpg",
+        "specs": [
+            {
+                "name": "Type",
+                "value": "Medium format"
+            },
+            {
+                "name": "Lens mount",
+                "value": "Fuji G"
+            },
+            {
+                "name": "Focus",
+                "value": "Manual"
+            },
+            {
+                "name": "Exposure",
+                "value": "Manual"
+            },
+            {
+                "name": "Flash",
+                "value": "Hot shoe"
+            },
+            {
+                "name": "Dimensions",
+                "value": "141 x 92 x 48 mm"
+            },
+            {
+                "name": "Weight",
+                "value": "590 g"
+            }
+        ],
+        "reviews": [
+            {
+                "stars": 5,
+                "body": "The Fuji GL690 Pro is a beast when it comes to medium format photography. The image quality is breathtaking, and it's a joy to work with in the studio.",
+                "author": "ProPhotographer1"
+            },
+            {
+                "stars": 4,
+                "body": "I'm an amateur photographer, and the Fuji GL690 Pro has elevated my photography game. It's a bit pricey, but the results are worth every penny.",
+                "author": "AmateurShutterbug"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "HOLGA 120 Pan",
+        "price": 89.95,
+        "featured": false,
+        "headline": "Creative Photography with HOLGA",
+        "description": "The HOLGA 120 Pan is a beloved medium format camera known for its lo-fi and creative photography results. It's perfect for experimental photographers looking to capture unique and dreamy images.",
+        "image": "HOLGA 120 Pan.jpg",
+        "specs": [
+            {
+                "name": "Type",
+                "value": "Medium format"
+            },
+            {
+                "name": "Lens mount",
+                "value": "HOLGA"
+            },
+            {
+                "name": "Focus",
+                "value": "Manual"
+            },
+            {
+                "name": "Exposure",
+                "value": "Manual"
+            },
+            {
+                "name": "Flash",
+                "value": "Hot shoe"
+            },
+            {
+                "name": "Dimensions",
+                "value": "141 x 92 x 48 mm"
+            },
+            {
+                "name": "Weight",
+                "value": "590 g"
+            }
+        ],
+        "reviews": [
+            {
+                "stars": 5,
+                "body": "The HOLGA 120 Pan is my go-to camera for artistic and dreamy shots. The imperfections in the photos add character, and I love it!",
+                "author": "ArtisticExplorer"
+            },
+            {
+                "stars": 4,
+                "body": "If you're into experimental photography, the HOLGA 120 Pan is a must-try. It's not for everyone, but it can produce some truly magical images.",
+                "author": "ExperimentalArtist"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "name": "Kodak Retina III C",
+        "price": 39.99,
+        "featured": false,
+        "headline": "Vintage Kodak Excellence",
+        "description": "The Kodak Retina III C is a vintage 35mm rangefinder camera with a rich history. It's a collector's item and a functional camera for those who appreciate the charm of classic Kodak photography.",
+        "image": "Kodak Retina III C.jpg",
+        "specs": [
+            {
+                "name": "Type",
+                "value": "35mm rangefinder"
+            },
+            {
+                "name": "Lens mount",
+                "value": "Kodak Retina"
+            },
+            {
+                "name": "Focus",
+                "value": "Manual"
+            },
+            {
+                "name": "Exposure",
+                "value": "Manual"
+            },
+            {
+                "name": "Flash",
+                "value": "Hot shoe"
+            },
+            {
+                "name": "Dimensions",
+                "value": "141 x 92 x 48 mm"
+            },
+            {
+                "name": "Weight",
+                "value": "590 g"
+            }
+        ],
+        "reviews": [
+            {
+                "stars": 4,
+                "body": "The Kodak Retina III C is a blast from the past. It's a conversation starter, and it still takes decent photos. A fun addition to any collection.",
+                "author": "VintageCameraCollector"
+            },
+            {
+                "stars": 3,
+                "body": "I bought the Kodak Retina III C for its vintage appeal. It's a bit tricky to use, but it's a piece of photographic history that I'm proud to own.",
+                "author": "HistoryBuffPhotog"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "name": "Nikon FE Black",
+        "price": 109.99,
+        "featured": true,
+        "headline": "The Iconic Nikon FE in Black",
+        "description": "The Nikon FE Black is a classic 35mm SLR camera renowned for its durability and precision. This black edition adds a touch of elegance to the iconic design, making it a favorite among serious photographers.",
+        "image": "Nikon FE Black.jpg",
+        "specs": [
+            {
+                "name": "Type",
+                "value": "35mm SLR"
+            },
+            {
+                "name": "Lens mount",
+                "value": "Nikon F"
+            },
+            {
+                "name": "Focus",
+                "value": "Manual"
+            },
+            {
+                "name": "Exposure",
+                "value": "Manual"
+            },
+            {
+                "name": "Flash",
+                "value": "Hot shoe"
+            },
+            {
+                "name": "Dimensions",
+                "value": "141 x 92 x 48 mm"
+            },
+            {
+                "name": "Weight",
+                "value": "590 g"
+            }
+        ],
+        "reviews": [
+            {
+                "stars": 5,
+                "body": "The Nikon FE Black is a work of art. It's not just a camera; it's a statement. The black finish oozes sophistication, and the performance is outstanding.",
+                "author": "SeriousShooter"
+            },
+            {
+                "stars": 4,
+                "body": "As a professional photographer, the Nikon FE Black is a reliable companion. It's rugged and delivers consistent results. Plus, it looks stunning in black.",
+                "author": "ProPhotog123"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "name": "Nikon L35 AF",
+        "price": 179.99,
+        "featured": false,
+        "headline": "Nikon's Autofocus Compact",
+        "description": "The Nikon L35 AF is a compact 35mm film camera that introduced autofocus technology to the world of point-and-shoot cameras. It's known for its simplicity and reliable performance.",
+        "image": "Nikon L35 AF.jpg",
+        "specs": [
+            {
+                "name": "Type",
+                "value": "35mm compact"
+            },
+            {
+                "name": "Lens",
+                "value": "35mm f/2.8"
+            },
+            {
+                "name": "Focus",
+                "value": "Autofocus"
+            },
+            {
+                "name": "Exposure",
+                "value": "Automatic"
+            },
+            {
+                "name": "Flash",
+                "value": "Built-in"
+            },
+            {
+                "name": "Dimensions",
+                "value": "141 x 92 x 48 mm"
+            },
+            {
+                "name": "Weight",
+                "value": "590 g"
+            }
+        ],
+        "reviews": [
+            {
+                "stars": 4,
+                "body": "The Nikon L35 AF is a no-nonsense camera. Point, shoot, and get sharp photos. It's perfect for everyday use and travel photography.",
+                "author": "TravelerPhotoGuy"
+            },
+            {
+                "stars": 3,
+                "body": "The autofocus on the Nikon L35 AF is convenient, but it's not the fastest. However, for casual photography, it gets the job done.",
+                "author": "CasualShooter"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "name": "NONS SL660 Instant",
+        "price": 495.00,
+        "featured": false,
+        "headline": "Instant Photography Reinvented",
+        "description": "The NONS SL660 Instant camera brings back the joy of instant photography with a modern twist. It combines nostalgic aesthetics with cutting-edge technology, allowing you to capture and print memories instantly.",
+        "image": "NONS SL660 Instant.jpg",
+        "specs": [
+            {
+                "name": "Type",
+                "value": "Instant"
+            },
+            {
+                "name": "Lens",
+                "value": "60mm f/12.7"
+            },
+            {
+                "name": "Focus",
+                "value": "Autofocus"
+            },
+            {
+                "name": "Exposure",
+                "value": "Automatic"
+            },
+            {
+                "name": "Flash",
+                "value": "Built-in"
+            },
+            {
+                "name": "Dimensions",
+                "value": "141 x 92 x 48 mm"
+            },
+            {
+                "name": "Weight",
+                "value": "590 g"
+            }
+        ],
+        "reviews": [
+            {
+                "stars": 5,
+                "body": "I'm in love with the NONS SL660 Instant camera! It combines the charm of instant photography with modern convenience. The prints are fantastic!",
+                "author": "InstantPhotoFanatic"
+            },
+            {
+                "stars": 4,
+                "body": "The NONS SL660 Instant camera is a fun and stylish way to capture memories. The instant prints bring back the nostalgia of Polaroid cameras, and the quality is impressive.",
+                "author": "NostalgiaLover"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "name": "Olympus TRIP35",
+        "price": 137.00,
+        "featured": false,
+        "headline": "Classic Olympus Quality",
+        "description": "The Olympus TRIP35 is a classic 35mm film camera known for its sharp lens and reliable performance. It's a go-to choice for photographers who appreciate simplicity and quality.",
+        "image": "Olympus TRIP35.jpg",
+        "specs": [
+            {
+                "name": "Type",
+                "value": "35mm compact"
+            },
+            {
+                "name": "Lens",
+                "value": "40mm f/2.8"
+            },
+            {
+                "name": "Focus",
+                "value": "Manual"
+            },
+            {
+                "name": "Exposure",
+                "value": "Automatic"
+            },
+            {
+                "name": "Flash",
+                "value": "Built-in"
+            },
+            {
+                "name": "Dimensions",
+                "value": "141 x 92 x 48 mm"
+            },
+            {
+                "name": "Weight",
+                "value": "590 g"
+            }
+        ],
+        "reviews": [
+            {
+                "stars": 4,
+                "body": "The Olympus TRIP35 is a workhorse that consistently delivers sharp photos. It's a reliable choice for street photography and travel adventures.",
+                "author": "StreetPhotoArtist"
+            },
+            {
+                "stars": 3,
+                "body": "I appreciate the simplicity of the Olympus TRIP35, but it lacks some modern features. It's a good option if you prefer a straightforward camera.",
+                "author": "SimplicityLover"
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "name": "Pentax K1000",
+        "price": 278.28,
+        "featured": true,
+        "headline": "Timeless Pentax Excellence",
+        "description": "The Pentax K1000 is a timeless 35mm SLR camera loved by generations of photographers. Its straightforward design and manual controls make it an ideal choice for those learning the art of photography.",
+        "image": "Pentax K1000.jpg",
+        "specs": [
+            {
+                "name": "Type",
+                "value": "35mm SLR"
+            },
+            {
+                "name": "Lens mount",
+                "value": "Pentax K"
+            },
+            {
+                "name": "Focus",
+                "value": "Manual"
+            },
+            {
+                "name": "Exposure",
+                "value": "Manual"
+            },
+            {
+                "name": "Flash",
+                "value": "Hot shoe"
+            },
+            {
+                "name": "Dimensions",
+                "value": "141 x 92 x 48 mm"
+            },
+            {
+                "name": "Weight",
+                "value": "590 g"
+            }
+        ],
+        "reviews": [
+            {
+                "stars": 5,
+                "body": "The Pentax K1000 is a classic that never goes out of style. It's perfect for beginners learning the ropes of film photography. Simple, reliable, and a joy to use.",
+                "author": "FilmPhotog101"
+            },
+            {
+                "stars": 4,
+                "body": "I bought the Pentax K1000 to teach my kids photography, and it's been a fantastic learning tool. It's durable and teaches them the basics of manual control.",
+                "author": "TeachingMom"
+            }
+        ]
+    },
+    {
+        "id": "12",
+        "name": "Zorkiy 4 Industar",
+        "price": 70.34,
+        "featured": false,
+        "headline": "Soviet Era Photography",
+        "description": "The Zorkiy 4 Industar is a vintage Soviet-era rangefinder camera that offers a glimpse into the world of photography during that era. It's a unique collector's item with a historical charm.",
+        "image": "Zorkiy 4 Industar.jpg",
+        "specs": [
+            {
+                "name": "Type",
+                "value": "35mm rangefinder"
+            },
+            {
+                "name": "Lens mount",
+                "value": "M39"
+            },
+            {
+                "name": "Focus",
+                "value": "Manual"
+            },
+            {
+                "name": "Exposure",
+                "value": "Manual"
+            },
+            {
+                "name": "Flash",
+                "value": "Hot shoe"
+            },
+            {
+                "name": "Dimensions",
+                "value": "141 x 92 x 48 mm"
+            },
+            {
+                "name": "Weight",
+                "value": "590 g"
+            }
+        ],
+        "reviews": [
+            {
+                "stars": 4,
+                "body": "The Zorkiy 4 Industar is a piece of history from the Soviet era. It may not match modern cameras in performance, but it's a conversation starter and a collector's gem.",
+                "author": "HistoryBuffCamera"
+            },
+            {
+                "stars": 3,
+                "body": "As a collector, I appreciate the Zorkiy 4 Industar's historical significance. It's not a camera I use regularly, but it's a fascinating piece of photographic history.",
+                "author": "CameraCollector123"
+            }
+        ]
+    }
+]
