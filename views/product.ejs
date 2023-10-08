@@ -56,18 +56,16 @@
 
 				<!-- spec -->
 				<div class="card shadow">
-					<div class="card-header fw-bold">
-						Specifications
-					</div>
+					<div class="card-header fw-bold">Specifications</div>
 					<div class="card-body">
 						<div class="table-responsive">
 							<table class="table fs-6">
-								<% for (let spec of product.specs) { %>
+							<% for (let spec of product.specs) { %>
 								<tr>
 									<td><small class="fw-bold"><%= spec.name %></small></td>
 									<td><small class="fw-light"><%= spec.value %></small></td>
 								</tr>
-								<% } %>
+							<% } %>
 							</table>
 						</div>
 					</div>
@@ -85,7 +83,7 @@
     			<input type="hidden" name="id" id="idInput" value="<%= product.id %>">
 					<div class="mb-3">
 						<label for="nameInput" class="mb-2">Your name</label>
-						<input type="text" name="author" id="nameInput" class="form-control border-0" placeholder="Name">
+						<input type="text" name="author" id="nameInput" class="form-control border-0" placeholder="Name" required>
 					</div>
 
 					<div>
@@ -109,7 +107,7 @@
 									<label class="form-check-label" for="ratingCheckbox4">4</label>
 								</div>
 								<div class="form-check form-check-inline me-4">
-									<input class="form-check-input" type="radio" name="rating" id="ratingCheckbox5" value="5">
+									<input class="form-check-input" type="radio" name="rating" id="ratingCheckbox5" value="5" required>
 									<label class="form-check-label" for="ratingCheckbox5">5</label>
 								</div>
 							</div>
@@ -118,28 +116,28 @@
 
 					<div class="mb-3">
 						<label for="reviewInput" class="mb-2">Review</label>
-						<textarea id="reviewInput" name="review" class="form-control border-0" rows="5" placeholder="Your review"></textarea>
+						<textarea id="reviewInput" name="review" class="form-control border-0" rows="5" placeholder="Your review" required></textarea>
 					</div>
 
-					<input type="submit" class="btn btn-warning float-end" id="submitReviewBtn" value="Submit Review" disabled>
+					<input type="submit" class="btn btn-warning float-end" id="submitReviewBtn" value="Submit Review">
 				</form>
 			</div>
 		</div>
 
 		<!-- reviews -->
-		<div class="list-group mb-5 shadow" id="reviews-div">
-			<div class="list-group-item bg-body-tertiary fw-bold">Reviews</div>
-
-			<% for (let review of product.reviews) { %>
-			<div class="list-group-item py-3">
-				<div class="d-flex gap-3">
-					<h5 class="fw-bold"><%= review.author %></h5>
-					<div class="fw-lighter text-warning"><%= review.stars %> stars</div>
-				</div>
-				<div class=""><%= review.body %></div>
-			</div>
-			<% } %>
-		
+		<div class="card">
+			<div class="card-header">Reviews</div>
+			<ul class="list-group list-group-flush">
+				<% for (let review of product.reviews) { %>
+				<li class="list-group-item p-3">
+					<div class="d-flex gap-3">
+						<h5 class="fw-bold"><%= review.author %></h5>
+						<div class="fw-lighter text-warning"><%= review.stars %> stars</div>
+					</div>
+					<div class=""><%= review.body %></div>
+				</li>
+				<% } %>
+			</ul>
 		</div>
 
 	</div>
@@ -147,28 +145,6 @@
 	<!-- footer -->
 	<%- include('partials/footer') %>
 
-	<!-- script -->
-	<script>
-		// check ontype event for nameInput, ratingCheckbox, reviewInput. if all are not empty, enable submitReviewBtn
-		const nameInput = document.getElementById('nameInput');
-		const ratingCheckbox = document.querySelectorAll('input[name="rating"]');
-		const reviewInput = document.getElementById('reviewInput');
-		const submitReviewBtn = document.getElementById('submitReviewBtn');
-
-		nameInput.addEventListener('input', checkInput);
-		reviewInput.addEventListener('input', checkInput);
-		ratingCheckbox.forEach(rating => {
-			rating.addEventListener('input', checkInput);
-		});
-
-		function checkInput() {
-			if (nameInput.value && reviewInput.value && document.querySelector('input[name="rating"]:checked')) {
-				submitReviewBtn.disabled = false;
-			} else {
-				submitReviewBtn.disabled = true;
-			}
-		}
-	</script>
 </body>
 
 </html>

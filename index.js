@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 4000;
+const port = 3000;
 const fs = require('fs');
 
 app.set('view engine', 'ejs');
@@ -8,8 +8,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 // read file from data/products.json
-// const products = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
-const products = require('./data/products.json');
+const products = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
 const image_path = '/images/products/';
 
 app.get('/', (req, res) => {
@@ -18,25 +17,23 @@ app.get('/', (req, res) => {
 
 app.get('/products/', (req, res) => {
     // sort products by id, name, price, and order by asc or desc
-    let sort = req.query.sort || 'name';
-    let order = req.query.order || 'asc';
-    products.sort((a, b) => {
-        if (sort === 'name') {
-            if (order === 'asc') {
-                return a[sort].localeCompare(b[sort]);
-            } else {
-                return b[sort].localeCompare(a[sort]);
-            }
-        } else {
-            if (order === 'asc') {
-                return a[sort] - b[sort];
-            } else {
-                return b[sort] - a[sort];
-            }
-        }
-    });
+    let sort = req.query.sort || 'name_asc';
+    let products_sorted = products;
+    if (sort == 'name_asc') {
+        products_sorted = products.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sort == 'name_desc') {
+        products_sorted = products.sort((a, b) => b.name.localeCompare(a.name));
+    } else if (sort == 'price_asc') {
+        products_sorted = products.sort((a, b) => a.price - b.price);
+    } else if (sort == 'price_desc') {
+        products_sorted = products.sort((a, b) => b.price - a.price);
+    } else if (sort == 'id_asc') {
+        products_sorted = products.sort((a, b) => a.id - b.id);
+    } else if (sort == 'id_desc') {
+        products_sorted = products.sort((a, b) => b.id - a.id);
+    }
     res.render('products', { 
-        products: products, 
+        products: products_sorted, 
         image_path: image_path
     });
 })
