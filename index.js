@@ -8,7 +8,8 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 // read file from data/products.json
-const products = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
+// const products = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
+const products = require('./data/products.json');
 const image_path = '/images/products/';
 
 app.get('/', (req, res) => {
