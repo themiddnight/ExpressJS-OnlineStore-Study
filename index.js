@@ -5,6 +5,7 @@ const fs = require('fs');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 // read file from data/products.json
 const products = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
@@ -52,17 +53,17 @@ app.get('/product/:id', (req, res) => {
 })
 
 app.post('/add-review', (req, res) => {
-    const { id, author, review, rating } = req.body;
+    const { id, author, rating, review } = req.body;
     const product = products.find(product => product.id == id);
     if (!product) {
         res.status(404).render('error', { error: 'Product not found' });
     }
     product.reviews.push({
         author: author,
-        review: review,
-        rating: rating
+        stars: rating,
+        body: review
     });
-    fs.writeFileSync('data/products.json', JSON.stringify(products));
+    // fs.writeFileSync('data/products.json', JSON.stringify(products));
     res.redirect(`/product/${id}`);
 })
 
@@ -70,3 +71,5 @@ app.post('/add-review', (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
+
+module.exports = app;

@@ -9,10 +9,22 @@ input[type="radio"]:checked {
     border-color: orange;
 }
 
-/* sm responsive */
+.magnify {
+    scale: 1;
+    transition: 0.3s;
+}
+
+.magnify:hover {
+    scale: 1.03;
+}
+
+/* xs responsive */
 @media (max-width: 576px) {
     .card-img-div {
         width: auto;
         height: auto;
+    }
+    .magnify:hover {
+        scale: 1;
     }
 }

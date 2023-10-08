@@ -3,114 +3,108 @@
 
 <head>
 	<%- include('partials/head.ejs') %>
-	<link rel="stylesheet" href="/styles/style_products.css">
-	<title>MIDDNIGHT - Products</title>
+		<link rel="stylesheet" href="/styles/style_products.css">
+		<title>MIDDNIGHT - Products</title>
 </head>
 
 <body data-bs-theme="dark">
 	<!-- navbar -->
 	<%- include('partials/navbar') %>
 
-	<!-- header -->
-	<section class="py-5 row g-0 container-fluid shadow"
-		style="background-position: center; background-size: cover; background-image: url(https://images.pexels.com/photos/3773478/pexels-photo-3773478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);">
-		<div class="col-0 col-md-3 col-lg-4 col-xl-5 col-xxl-6"></div>
-		<div class="col-12 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
-			<div class="rounded p-5 shadow"
-			style="backdrop-filter: brightness(0.3); -webkit-backdrop-filter: brightness(0.3);">
-			<h1 class="fw-light">Many products are here!</h1>
-			<p class="lead text-body-secondary">Something short and leading about the collection below—its contents, the
-				creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-			</div>
-		</div>
-	</section>
-
-	<!-- container -->
-	<div class="container mt-4 mt-xxl-5">
-
-		<!-- sorting and order -->
-		<div class="d-sm-flex gap-3 mb-4 align-items-center">
-			<div class="my-2 my-sm-0">Order by: </div>
-			<div class="row">
-
-				<div class="col-sm-auto my-2 my-sm-0">
-					<select id="sort_select" class="form-select">
-						<option value="id">ID</option>
-						<option selected value="name">Name</option>
-						<option value="price">Price</option>
-					</select>
+		<!-- header -->
+		<section class="py-5 row g-0 container-fluid shadow"
+			style="background-position: center; background-size: cover; background-image: url(https://images.pexels.com/photos/3773478/pexels-photo-3773478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);">
+			<div class="col-0 col-md-3 col-lg-4 col-xl-5 col-xxl-6"></div>
+			<div class="col-12 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
+				<div class="rounded p-5 shadow"
+					style="backdrop-filter: brightness(0.3); -webkit-backdrop-filter: brightness(0.3);">
+					<h1 class="fw-light">Many products are here!</h1>
+					<p class="lead text-body-secondary">Something short and leading about the collection below—its contents, the
+						creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
 				</div>
-
-				<div class="col-sm-auto my-2 my-sm-0">
-					<select id="order_select" class="form-select">
-						<option value="asc">Ascending</option>
-						<option value="desc">Desending</option>
-					</select>
-				</div>
-
 			</div>
-		</div>
+		</section>
 
-		<!-- products section -->
-		<div id="prodListDiv" class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 g-xxl-5">
+		<!-- container -->
+		<div class="container mt-4 mt-xxl-5">
 
-		<% for (let product of products) { %>
-			<div class="col-auto">
-				<div class="card shadow">
-					<div class="card-img-div">
-						<a href="product/<%= product.id %>">
-							<img class="card-img-top" style="height: 100%; object-fit: cover;"
-								src="<%= image_path + product.image %>">
-						</a>
+			<!-- sorting and order -->
+			<div class="d-sm-flex gap-3 mb-4 align-items-center">
+				<div class="my-2 my-sm-0">Order by: </div>
+				<div class="row">
+
+					<div class="col-sm-auto my-2 my-sm-0">
+						<select id="sort_select" class="form-select">
+							<option value="id">ID</option>
+							<option selected value="name">Name</option>
+							<option value="price">Price</option>
+						</select>
 					</div>
-					<div class="card-body text-center">
-						<a href="product/<%= product.id %>" class="text-decoration-none text-white">
-							<h5 class="card-title"><%= product.name %></h5>
-						</a>
-						<p class="card-text">Price: $<%= product.price %>
-						</p>
-						<div class="d-flex justify-content-evenly g-3 my-4">
-							<a href="product/<%= product.id %>" class="btn btn-secondary" style="width: 80px;">Details</a>
-							<a href="#" class="btn btn-warning" style="width: 80px;">Buy</a>
+
+					<div class="col-sm-auto my-2 my-sm-0">
+						<select id="order_select" class="form-select">
+							<option value="asc">Ascending</option>
+							<option value="desc">Desending</option>
+						</select>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- products section -->
+			<div id="prodListDiv" class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4 g-xxl-5">
+
+			<% for (let product of products) { %>
+				<div class="col-auto">
+					<a href="product/<%= product.id %>" class="text-decoration-none">
+						<div class="card h-100 shadow magnify">
+							<div class="card-img-div">
+								<img class="card-img-top" style="height: 100%; object-fit: cover;"
+									src="<%= image_path + product.image %>">
+							</div>
+							<div class="card-body">
+								<h5 class="card-title"><%= product.name %></h5>
+								<h6 class="card-subtitle text-body-secondary mb-4"><%= product.headline %></h6>
+								<h4 class="card-text text-warning">$<%= product.price %></h4>
+							</div>
 						</div>
-					</div>
+					</a>
 				</div>
+				<% } %>
+
 			</div>
-		<% } %>
-
 		</div>
-	</div>
 
-	<!-- footer -->
-	<%- include('partials/footer') %>
+		<!-- footer -->
+		<%- include('partials/footer') %>
 
-	<!-- scripts -->
-	<script>
-		// reload the page with query string
-		const reload = () => {
-			window.location.href = `/products?sort=${sortSelect.value}&order=${orderSelect.value}`;
-		}
+			<!-- scripts -->
+			<script>
+				// reload the page with query string
+				const reload = () => {
+					window.location.href = `/products?sort=${sortSelect.value}&order=${orderSelect.value}`;
+				}
 
-		// get sort and order element
-		const sortSelect = document.getElementById('sort_select');
-		const orderSelect = document.getElementById('order_select');
+				// get sort and order element
+				const sortSelect = document.getElementById('sort_select');
+				const orderSelect = document.getElementById('order_select');
 
-		// set value of sort and order from query string
-		const urlParams = new URLSearchParams(window.location.search);
-		const sort = urlParams.get('sort');
-		const order = urlParams.get('order');
-		if (sort) {
-			sortSelect.value = sort;
-		}
-		if (order) {
-			orderSelect.value = order;
-		}
+				// set value of sort and order from query string
+				const urlParams = new URLSearchParams(window.location.search);
+				const sort = urlParams.get('sort');
+				const order = urlParams.get('order');
+				if (sort) {
+					sortSelect.value = sort;
+				}
+				if (order) {
+					orderSelect.value = order;
+				}
 
-		// add event listener to sort and order select
-		sortSelect.addEventListener('change', reload);
-		orderSelect.addEventListener('change', reload);
+				// add event listener to sort and order select
+				sortSelect.addEventListener('change', reload);
+				orderSelect.addEventListener('change', reload);
 
-	</script>
+			</script>
 </body>
 
 </html>

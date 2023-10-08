@@ -2,7 +2,7 @@
     {
         "id": "1",
         "name": "Canon AE-1 Program",
-        "price": 90.00,
+        "price": 90,
         "featured": false,
         "headline": "A Classic 35mm Film SLR Camera",
         "description": "The Canon AE-1 Program is a legendary 35 mm single-lens reflex camera that uses Canon's FD mount lenses. Introduced in 1981, it became an instant classic, five years after the original AE-1. One of its standout features is the Program AE mode, which automatically sets the shutter speed and aperture, making it user-friendly for beginners while still offering manual control options.",
@@ -53,7 +53,7 @@
     {
         "id": "2",
         "name": "Canon AF35M Autoboy",
-        "price": 120.00,
+        "price": 120,
         "featured": false,
         "headline": "The Pioneering Automatic Compact Camera",
         "description": "The Canon AF35M, known as the 'Autoboy' in Japan and 'Sure Shot' in the US, was the world's first fully automatic compact camera. Launched in 1979 and discontinued in 1983, it revolutionized photography with its infrared autofocus sensor. This camera made capturing moments effortlessly simple.",
@@ -410,7 +410,7 @@
     {
         "id": "9",
         "name": "NONS SL660 Instant",
-        "price": 495.00,
+        "price": 495,
         "featured": false,
         "headline": "Instant Photography Reinvented",
         "description": "The NONS SL660 Instant camera brings back the joy of instant photography with a modern twist. It combines nostalgic aesthetics with cutting-edge technology, allowing you to capture and print memories instantly.",
@@ -461,7 +461,7 @@
     {
         "id": "10",
         "name": "Olympus TRIP35",
-        "price": 137.00,
+        "price": 137,
         "featured": false,
         "headline": "Classic Olympus Quality",
         "description": "The Olympus TRIP35 is a classic 35mm film camera known for its sharp lens and reliable performance. It's a go-to choice for photographers who appreciate simplicity and quality.",
