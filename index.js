@@ -3,13 +3,13 @@ const app = express();
 const port = 3000;
 const fs = require('fs');
 
-app.set('view engine', 'ejs');
-app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true }));
-
 // read file from data/products.json
 const products = JSON.parse(fs.readFileSync('data/products.json', 'utf8'));
 const image_path = '/images/products/';
+
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     res.render('index');
@@ -63,6 +63,10 @@ app.post('/add-review', (req, res) => {
     });
     // fs.writeFileSync('data/products.json', JSON.stringify(products));
     res.redirect(`/product/${id}`);
+})
+
+app.get('/about', (req, res) => {
+    res.render('about');
 })
 
 // listen port
